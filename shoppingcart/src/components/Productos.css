@@ -1,0 +1,23 @@
+.productos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos ul{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit(
+            200px,
+            1fr
+        )
+    );
+    gap: 1rem
+}
+
+.productos li{
+    display: flex;
+    flex-direction: column;
+}
