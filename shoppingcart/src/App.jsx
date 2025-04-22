@@ -2,15 +2,16 @@ import { useState } from 'react'
 import './App.css'
 import { Productos } from './components/Productos'
 import { productos } from './mocks/productos.json'
+import { Nav } from './components/Nav'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
-    <h1 style={{textAlign: 'center', color: 'white'}}> Carro de compra </h1>
-
+   
+    <Nav />
+  
     <Productos Productos= {productos}    />
    
     </>
