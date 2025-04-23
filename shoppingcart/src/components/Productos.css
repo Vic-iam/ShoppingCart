@@ -2,18 +2,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem; /* Añade espacio alrededor del contenedor */
+    padding: 2rem;
 }
 
 .productos ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Un poco más ancho mínimo */
-    gap: 2rem; /* Más espacio entre los elementos */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
-    max-width: 1200px; /* Limita el ancho total para mejor diseño en pantallas grandes */
+    max-width: 1200px;
 }
 
 .productos li {
@@ -55,7 +55,7 @@
     background-color: black;
     font-size: 1rem;
     width: 200px;
-    border-radius: 9999px; /* Completamente redondo */
+    border-radius: 9999px;
     color: white;
     padding: 0.75rem 1rem;
     text-decoration: none;
