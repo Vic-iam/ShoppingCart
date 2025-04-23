@@ -11,7 +11,6 @@ export function Productos({ Productos }) {
                         <img style={{height: "200px", width: "300px"}}
                             src={Productos.thumbnail}
                             alt={Productos.title}
-
                         />
 
                         <div className="title">
@@ -23,7 +22,7 @@ export function Productos({ Productos }) {
                             <button className="btn">
                                 Comprar
                             </button>
-                            
+
                         </div>
 
                     </li>
