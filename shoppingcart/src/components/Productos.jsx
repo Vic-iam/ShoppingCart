@@ -8,23 +8,22 @@ export function Productos({ Productos }) {
                 {Productos.map(Productos =>
 
                     <li key={Productos.id}>
-                        <img
+                        <img style={{height: "200px", width: "300px"}}
                             src={Productos.thumbnail}
                             alt={Productos.title}
 
                         />
-                        <div>
-                            <h3 style={{ color: 'white' }}> {Productos.title} - {Productos.stock} </h3>
-                        </div>
 
-                        <div>
-                            <p style={{ color: 'white' }}> {Productos.description} </p>
-                        </div> 
+                        <div className="title">
 
-                        <div>
-                            <button>
+                            <h3> {Productos.title} - {Productos.stock} </h3>
+                        
+                            <p> {Productos.description} </p>
+                        
+                            <button className="btn">
                                 Comprar
                             </button>
+                            
                         </div>
 
                     </li>

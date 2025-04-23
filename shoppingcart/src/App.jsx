@@ -6,13 +6,31 @@ import { Nav } from './components/Nav'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [filters, setFilters] = useState({
+     category: 'all',
+     minPrice: 0
+  })
+  
+  const filterProducts = (productos) => {
+    return productos.filter(product => {
+      return(
+        product.price >= filters.minPrice &&
+        (
+          filters.category === 'all' ||
+          product.category === filters.category
+        )
+      )
+    })
+  }
+
+  const filteredProducts = filterProducts(productos)
 
   return (
     <>
    
     <Nav />
   
-    <Productos Productos= {productos}    />
+    <Productos Productos= {filteredProducts}    />
    
     </>
   )
