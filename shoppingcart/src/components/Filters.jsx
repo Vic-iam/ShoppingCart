@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Filters.css"
 
 export function Filters() {
+
+    const [minPrice, setMinPrice] = useState(0)
+
+    const HandleChangeMinPrice  = (event) => {
+        setMinPrice(event.target.value)
+    }
 
     return (
 
@@ -13,7 +19,9 @@ export function Filters() {
                     id='price'
                     min='0'
                     max='1000'
+                    onChange={HandleChangeMinPrice}
                 />
+                <span>${minPrice}</span>
             </div>
 
             <div className='filter-group'>
