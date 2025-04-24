@@ -1,0 +1,29 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    padding: 20px;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  label {
+    color: white;
+  }
+  
+  input[type='range'],
+  select {
+    background-color: #222;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px;
+  }
