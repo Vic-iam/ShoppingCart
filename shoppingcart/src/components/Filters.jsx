@@ -5,13 +5,14 @@ export function Filters() {
 
     const [minPrice, setMinPrice] = useState(0)
 
-    const HandleChangeMinPrice  = (event) => {
+    const HandleChangeMinPrice = (event) => {
         setMinPrice(event.target.value)
     }
 
     return (
 
         <section className='filters'>
+
             <div className='filter-group'>
                 <label htmlFor="price">Precio</label>
                 <input
@@ -21,8 +22,10 @@ export function Filters() {
                     max='1000'
                     onChange={HandleChangeMinPrice}
                 />
-                <span>${minPrice}</span>
+
             </div>
+            
+            <span>${minPrice}</span>
 
             <div className='filter-group'>
                 <label htmlFor='category'>Categoría</label>
