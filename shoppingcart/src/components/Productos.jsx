@@ -15,7 +15,7 @@ export function Productos({ Productos }) {
 
                         <div className="title">
 
-                            <h3> {Productos.title} - {Productos.stock} </h3>
+                            <h3> {Productos.title} - ${Productos.stock} </h3>
                         
                             <p> {Productos.description} </p>
                         

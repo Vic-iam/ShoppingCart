@@ -30,7 +30,7 @@ function App() {
    
     <Nav />
   
-    <Productos Productos= {filteredProducts}    />
+    <Productos Productos= {filteredProducts} />
    
     </>
   )
