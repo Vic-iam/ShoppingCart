@@ -19,7 +19,7 @@ export function Productos({ Productos }) {
                         
                             <p> {Productos.description} </p>
                         
-                            <button className="btn">
+                            <button className="btn" > 
                                 Comprar
                             </button>
 
