@@ -20,8 +20,8 @@ export function Productos({ Productos }) {
                             <p> {Productos.description} </p>
                         
                             <button className="btn" > 
-                                Comprar
-                            </button>
+                                Comprar 
+                            </button >
 
                         </div>
 
