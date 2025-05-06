@@ -34,6 +34,7 @@ export function Filters( {onChange} ) {
                     min='0'
                     max='1000'
                     onChange={HandleChangeMinPrice}
+                    class= "slider"
                 />
 
             </div>
