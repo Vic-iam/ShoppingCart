@@ -28,7 +28,7 @@ function App() {
   return (
     <>
    
-    <Nav />
+    <Nav changeFilters={setFilters}/>
   
     <Productos Productos= {filteredProducts} />
    
