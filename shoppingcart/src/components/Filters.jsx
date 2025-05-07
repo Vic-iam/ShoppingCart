@@ -5,7 +5,7 @@ export function Filters( {onChange} ) {
 
     const [minPrice, setMinPrice] = useState(0)
 
-    
+    //Hola
 
     const HandleChangeMinPrice = (event) => {
         setMinPrice(event.target.value)
