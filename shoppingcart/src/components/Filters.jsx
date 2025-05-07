@@ -32,7 +32,7 @@ export function Filters( {onChange} ) {
                     type='range'
                     id='price'
                     min='0'
-                    max='1000'
+                    max='500'
                     onChange={HandleChangeMinPrice}
                     class= "slider"
                 />
