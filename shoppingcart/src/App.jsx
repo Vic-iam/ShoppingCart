@@ -28,9 +28,9 @@ function App() {
   return (
     <>
    
-    <Nav changeFilters={setFilters}/>
+    <Nav changeFilters={setFilters} />
   
-    <Productos Productos= {filteredProducts} />
+    <Productos Productos= {filteredProducts}    />
    
     </>
   )
