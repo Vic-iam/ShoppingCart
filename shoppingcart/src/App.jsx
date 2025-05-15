@@ -28,9 +28,13 @@ function App() {
   return (
     <>
    
-    <Nav changeFilters={setFilters}/>
+    <Nav changeFilters={setFilters} />
   
+<<<<<<< HEAD
     <Productos Productos= {filteredProducts}/>
+=======
+    <Productos Productos= {filteredProducts}    />
+>>>>>>> 9cbbabb4704e6d61c52ee720aed6d538eb4986db
    
     </>
   )
