@@ -30,7 +30,7 @@ function App() {
    
     <Nav changeFilters={setFilters}/>
   
-    <Productos Productos= {filteredProducts} />
+    <Productos Productos= {filteredProducts}/>
    
     </>
   )
