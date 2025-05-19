@@ -5,8 +5,6 @@ function Productos() {
 
   return (
   <>
-    
-    <Nav />
      
      <h2> Hola </h2>
 

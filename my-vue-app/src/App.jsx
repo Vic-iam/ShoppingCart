@@ -3,16 +3,48 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Nav from './components/Nav'
+import { Routes, Route } from 'react-router-dom';
+import Productos from './Login'
+import Contactos from './Contactos'
+import Home from './Home'
+import Cart from './components/Cart'
+import ProducList from './components/ProducList'
 
 function App() {
   
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems(prev => {
+      const item = prev.find(p => p.id === product.id);
+      if (item) {
+        return prev.map(p => p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p);
+      }
+      return [...prev, { ...product, quantity: 1 }];
+    });
+  };
+
+  const removeFromCart = (id) => {
+    setCartItems(prev => prev.filter(p => p.id !== id));
+  };
 
   return (
     <>
 
     <Nav />
+ 
+    <ProducList />
 
-      
+    <Cart />
+
+
+
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/productos" element={<Productos />} />
+      <Route path="/contactos" element={<Contactos />} />
+    </Routes>
     </>
   )
 }
