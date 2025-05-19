@@ -1,0 +1,44 @@
+.Navbar {
+    background-color: #fbfcfc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+h2{
+    font-size: 2.1rem;
+}
+
+.Tech {
+    font-size: 2rem;
+    color: #7b241c;
+}
+
+.Navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.Navbar li {
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+@media (max-width: 480px) {
+    h2, .Tech {
+        font-size: 1.4rem;
+    }
+
+    .Navbar li {
+        font-size: 1rem;
+    }
+}
