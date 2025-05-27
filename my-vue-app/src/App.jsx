@@ -9,7 +9,7 @@ import Cart from './components/Cart'
 import ProducList from './components/ProducList'
 
 function App() {
-  
+
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (product) => {
@@ -29,20 +29,22 @@ function App() {
   return (
     <>
 
-    <Nav />
- 
-    <ProducList  addToCart={addToCart}/>
+      <Nav />
 
-    <Cart cartItems={cartItems} removeFromCart={removeFromCart}  />
-
-
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+      
+      <ProducList addToCart={addToCart} />
 
 
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/productos" element={<Productos />} />
-      <Route path="/contactos" element={<Contactos />} />
-    </Routes>
+
+
+
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/contactos" element={<Contactos />} />
+      </Routes>
     </>
   )
 }
