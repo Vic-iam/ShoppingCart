@@ -1,37 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Nav from './components/Nav'
 import { Routes, Route } from 'react-router-dom';
 import Productos from './Login'
 import Contactos from './Contactos'
 import Home from './Home'
-import ProducList from './components/ProducList'
+
 
 function App() {
-
-  const [cartItems, setCartItems] = useState([]);
-
-  const addToCart = (product) => {
-    setCartItems(prev => {
-      const item = prev.find(p => p.id === product.id);
-      if (item) {
-        return prev.map(p => p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p);
-      }
-      return [...prev, { ...product, quantity: 1 }];
-    });
-  };
-
-  const removeFromCart = (id) => {
-    setCartItems(prev => prev.filter(p => p.id !== id));
-  };
-
   return (
     <>
-
-      <Nav cartItems={cartItems} removeFromCart={removeFromCart}  />
-
-      <ProducList addToCart={addToCart} />
-
+     <Home />
+     
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productos" element={<Productos />} />
