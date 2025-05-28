@@ -11,28 +11,3 @@ body{
   font-style: normal;
 }
 
-.products, .cart {
-  margin-top: 20px;
-  padding: 10px;
-  background: white;
-  border-radius: 8px;
-}
-
-.product, .cart-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px 0;
-}
-
-button {
-  background-color: #7b241c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #922b21 ;
-}

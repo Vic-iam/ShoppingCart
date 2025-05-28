@@ -1,16 +1,13 @@
 import React from 'react'
 import Nav from './components/Nav'
 
-function Productos() {
+function Login() {
 
   return (
   <>
-     
-     <h2> Hola </h2>
-            ey
   </>
   )
 
 }
 
-export default Productos
+export default Login;

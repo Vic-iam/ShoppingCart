@@ -5,7 +5,6 @@ import { Routes, Route } from 'react-router-dom';
 import Productos from './Login'
 import Contactos from './Contactos'
 import Home from './Home'
-import Cart from './components/Cart'
 import ProducList from './components/ProducList'
 
 function App() {
@@ -29,16 +28,9 @@ function App() {
   return (
     <>
 
-      <Nav />
+      <Nav cartItems={cartItems} removeFromCart={removeFromCart}  />
 
-      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-      
       <ProducList addToCart={addToCart} />
-
-
-
-
-
 
       <Routes>
         <Route path="/" element={<Home />} />

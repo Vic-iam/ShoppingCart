@@ -1,22 +1,39 @@
-import React from 'react'
-import Style from './nav.module.css'
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
+import styles from './nav.module.css';
 
-function Nav() {
+function Nav({ cartItems, removeFromCart }) {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
+        <nav className={styles.navbar}>
+            <div className={styles.logo}>
+                <h2>Talento<span className={styles.tech}>Tech</span></h2>
+            </div>
 
-        <nav className={Style.Navbar}>
-            <h2> Talento<span className={Style.Tech}>Tech </span></h2>
+            <button
+                className={styles.toggle}
+                onClick={() => setMenuOpen(prev => !prev)}
+            >
+                ☰
+            </button>
+            
 
-            <ul>
+            <div className={`${styles.links} ${menuOpen ? styles.active : ''}`}>
+                <ul>
+                    <li><Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link></li>
+                    <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
+                    <li><Link to="/productos" onClick={() => setMenuOpen(false)}>Productos</Link></li>
+                    <li><Link to="/contactos" onClick={() => setMenuOpen(false)}>Contactos</Link></li>
+                </ul>
 
-                <li><Link to="/">Inicio</Link></li>
-                <li><Link to="/productos">Productos</Link></li>
-                <li><Link to="/contactos">Contactos</Link></li>
-            </ul>
-
+                <div className={styles.cartContainer}>
+                    <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
+                </div>
+            </div>
         </nav>
-    )
+    );
 }
 
 export default Nav;
