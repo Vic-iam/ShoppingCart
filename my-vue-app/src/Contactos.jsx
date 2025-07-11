@@ -6,9 +6,9 @@ function Contactos()  {
   return (
   <>
   
-  
+  <Nav />
 
-   <h2> Contactos </h2>
+   <h2 style={{color:"white"}}> Contactos </h2>
    
   
   </>
