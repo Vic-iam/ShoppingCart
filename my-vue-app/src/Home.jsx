@@ -2,7 +2,7 @@ import Nav from "./components/Nav"
 import ProducList from './components/ProducList'
 import { useState } from 'react'
 
-function Home() {
+function Home() { 
 
 
   const [cartItems, setCartItems] = useState([]);

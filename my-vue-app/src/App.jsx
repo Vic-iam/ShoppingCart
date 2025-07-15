@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
-import Productos from './Login'
+import GaleriadeProductos from './Galeriadeproductos'
 import Contactos from './Contactos'
 import Home from './Home'
+import Login from './Login'
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <>
      
       <Routes>
+        <Route path="/login" element={<Login/>} />
         <Route path="/" element={<Home />} />
-        <Route path="/productos" element={<Productos />} />
+        <Route path="/productos" element={<GaleriadeProductos/>} />
         <Route path="/contactos" element={<Contactos />} />
       </Routes>
     </>
