@@ -4,7 +4,6 @@ import style from './estatico/producto.module.css'
 const Productos = ({ producto }) => {
   return (
 
-    <div className={style.container}>
 
       <section className={style.card}>
 
@@ -28,7 +27,6 @@ const Productos = ({ producto }) => {
 
         </div>
       </section>
-    </div>
   )
 }
 

@@ -1,58 +1,71 @@
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+.card {
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
     padding: 20px;
 }
 
-.card {
-  width: 300px; 
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .imageContainer {
     height: 200px;
-    padding: 20px;
+    width: 100%;
 }
 
 .image {
-    height: 100%;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
 }
 
 .description {
-    background-color: red;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #F1F1F3;
+    border-top: 1px solid #ddd;
 }
 
 .nombre {
-    font-size: 1.7rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    color: #EEF1F6;
+    color: #333;
+    margin: 10px 0;
 }
 
 .price {
-    font-size: 1.5rem;
-    color: #F1F1F3;
+    font-size: 1.4rem;
+    color: #2d2d2d;
+    margin: 5px 0;
 }
 
 .stock {
-    font-size: 1.4rem;
-    color: #F1F1F3;
+    font-size: 1.3rem;
+    color: #333;
+    margin: 5px 0;
 }
 
-.agregar{
-    border: none;
-    border-radius: 20px;
-    margin: 10px;
+.cantidadContainer {
+    display: flex;
+    align-items: center;
+    gap: 3px;
     padding: 10px;
 }
+
+.qtyButton{
+    background-color: #601D16;
+    height: 20px;
+    width: 30px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
