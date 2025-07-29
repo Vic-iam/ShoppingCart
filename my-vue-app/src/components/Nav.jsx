@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import styles from './nav.module.css';
 
-function Nav({ cartItems, removeFromCart }) {
+function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
