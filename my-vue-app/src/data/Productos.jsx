@@ -8,7 +8,7 @@ import img7 from '../assets/image7.jpg';
 import img8 from '../assets/image8.jpg';
 
 
-const productos = [
+const producto = [
     {
         id: 1,
         nombre: "Campera de fútbol WARDROBE Essentials Retro",
@@ -68,4 +68,4 @@ const productos = [
     }
 ]
 
-export default productos;
+export default producto;

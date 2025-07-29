@@ -24,7 +24,7 @@ function App() {
       setError(true);
       setCargando(false)
     }
-   })
+   }, [])
 
 
   return (

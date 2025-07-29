@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Productos from './productos';
+import ProductosCard from './productos';
 
 const ProducList = ({productos}) => {
     return (
@@ -8,8 +8,8 @@ const ProducList = ({productos}) => {
    
    {
 
-    Productos.map(producto=> (
-        <Productos key={producto.id} producto={producto}/>
+    productos.map(producto=> (
+        <ProductosCard key={producto.id} producto={producto}/>
 
     ))
 
