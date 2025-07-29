@@ -28,9 +28,6 @@ function Nav({ cartItems, removeFromCart }) {
                     <li><Link to="/contactos" onClick={() => setMenuOpen(false)}>Contactos</Link></li>
                 </ul>
 
-                <div className={styles.cartContainer}>
-                    <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
-                </div>
             </div>
         </nav>
     );
