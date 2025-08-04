@@ -1,18 +1,26 @@
 import React from 'react'
 import Nav from './components/Nav'
-import { useState } from 'react'
-import products from "./data/Productos"
+import ProducList from './components/ProducList'
+import loading from "./assets/loading.gif"
 
-function GaleriadeProductos() {
+const GaleriadeProductos = ({ cart,productos, cargando }) => {
 
-
+  
   return (
 
     <>
 
-      <Nav />
+      <Nav  carItems={cart}/>
 
-      </>
+      <h2 style={{position: "absolute", top: "200px"}}>Productos</h2>
+
+      {
+        cargando ? <img src={loading} alt="loading" /> :
+
+          <ProducList productos={productos} />
+      }
+
+    </>
 
   )
 

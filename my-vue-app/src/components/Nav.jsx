@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import styles from './nav.module.css';
+import './estatico/Cart.css'
 
-function Nav() {
+const Nav = ({carItems}) => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isCartOpen, setCartOpen] = useState(false)
+
 
     return (
         <nav className={styles.navbar}>
@@ -26,6 +29,10 @@ function Nav() {
                     <li><Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link></li>
                     <li><Link to="/productos" onClick={() => setMenuOpen(false)}>Productos</Link></li>
                     <li><Link to="/contactos" onClick={() => setMenuOpen(false)}>Contactos</Link></li>
+                    <li className='carnav'>
+                      <buttom className='btncart' onClick={()=> setCartOpen(true)}><i class="fa-solid fa-cart-shopping"></i></buttom>
+                      <Cart carItems={carItems} isOpen={isCartOpen} onclose={() => setCartOpen(false)}/>
+                    </li>
                 </ul>
 
             </div>

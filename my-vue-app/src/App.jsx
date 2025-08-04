@@ -31,14 +31,15 @@ function App() {
     <>
      
       <Routes>
-        <Route path="/login" element={<Login/>} />
+        <Route path="/login"  element={<Login/>} />
 
-        <Route path="/" element={<Home productos={productos} 
+        <Route path="/" element={<Home cart={cart} productos={productos} 
         cargando={cargando} />} />
 
-        <Route path="/productos" element={<GaleriadeProductos/>} />
+        <Route path="/productos" element={<GaleriadeProductos cart={cart}  productos={productos} cargando={cargando}/>} />
 
-        <Route path="/contactos" element={<Contactos />} />
+        <Route path="/contactos" element={<Contactos cart={cart}  />} />
+
 
       </Routes>
     </>

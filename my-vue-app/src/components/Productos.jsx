@@ -14,7 +14,7 @@ const Productos = ({ producto }) => {
         <div className={style.description}>
 
           <h2 className={style.nombre}> {producto.nombre} </h2>
-          <p className={style.price}>{producto.price}</p>
+          <p className={style.price}>${producto.price}</p>
           <p className={style.stock}>{producto.stock}</p>
 
           <div className={style.cantidadContainer}>
@@ -22,7 +22,7 @@ const Productos = ({ producto }) => {
             <span></span>
             <button className={style.qtyButton}>+</button>
           </div>
-
+          
           <button className={style.agregar}>Agregar al carrito</button>
 
         </div>

@@ -2,13 +2,13 @@ import Nav from "./components/Nav"
 import ProducList from './components/ProducList'
 import loading from '../src/assets/loading.gif'
 
-const Home = ({productos,cargando}) => { 
+const Home = ({cart,productos,cargando}) => { 
 
 
   return (
     <>
     
-      <Nav />
+      <Nav  carItems={cart}/>
 
     {
       cargando ? <img src={loading} alt="loading" /> :

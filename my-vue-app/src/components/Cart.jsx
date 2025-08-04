@@ -1,15 +1,29 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './estatico/Cart.css';
+import React from 'react';
+import './estatico/Cart.css'
 
-
-function Cart() {
+const Cart = ({ carItems, isOpen, onclose }) => {
     return (
-        <>
+        <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
+            <div className='cart-header'>
+                <h2>Carrito de compra</h2>
+                <button onClick={onclose} className='close-button'>X</button>
+            </div>
+            <div className='cart-content'>
+                {carItems.length === 0 ? (
+                    <p style={{ color: 'red' }}>El carrito está vacío</p>
+                ) : (
+                    <ul className='cart-item'>
+                        {carItems.map((item, index) => (
+                            <li key={index} style={{ color: 'green' }}>
+                                {item.nombre} - {item.precio}
+                                <button><i class="fa-solid fa-cart-shopping"></i></button>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </div>
+        </div>
+    );
+};
 
-        </>
-
-    )
-
-}
 export default Cart;
