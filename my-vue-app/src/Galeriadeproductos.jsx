@@ -3,7 +3,7 @@ import Nav from './components/Nav'
 import ProducList from './components/ProducList'
 import loading from "./assets/loading.gif"
 
-const GaleriadeProductos = ({ cart,productos, cargando }) => {
+const GaleriadeProductos = ({ cart,productos, cargando, agregarCarrito, borrarProducto }) => {
 
   
   return (
@@ -17,7 +17,7 @@ const GaleriadeProductos = ({ cart,productos, cargando }) => {
       {
         cargando ? <img src={loading} alt="loading" /> :
 
-          <ProducList productos={productos} />
+          <ProducList borrarProducto={handleDeleteFromCart} agregarCarrito={agregarCarrito} productos={productos} />
       }
 
     </>

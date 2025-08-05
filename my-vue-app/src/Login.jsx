@@ -2,14 +2,13 @@ import React from 'react'
 import Nav from './components/Nav'
 import { useState } from 'react'
 
-const Login = ()  =>{
-  
-    
+const Login = ({cart}) => {
+
 
   return (
   <>
 
-   <Nav carItems={cart}/>
+   <Nav cartItems={cart} />
 
   </>
   )

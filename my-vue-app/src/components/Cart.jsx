@@ -1,7 +1,7 @@
 import React from 'react';
 import './estatico/Cart.css'
 
-const Cart = ({ carItems, isOpen, onclose }) => {
+const Cart = ({ carItems, isOpen, onclose, borrarProducto}) => {
     return (
         <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
             <div className='cart-header'>
@@ -16,7 +16,7 @@ const Cart = ({ carItems, isOpen, onclose }) => {
                         {carItems.map((item, index) => (
                             <li key={index} style={{ color: 'green' }}>
                                 {item.nombre} - {item.precio}
-                                <button><i class="fa-solid fa-cart-shopping"></i></button>
+                                <button onClick={() => borrarProducto(item)}><i class="fa-solid fa-cart-shopping"></i></button>
                             </li>
                         ))}
                     </ul>

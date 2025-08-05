@@ -4,7 +4,7 @@ import Cart from './Cart';
 import styles from './nav.module.css';
 import './estatico/Cart.css'
 
-const Nav = ({carItems}) => {
+const Nav = ({carItems, borrarProducto}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isCartOpen, setCartOpen] = useState(false)
 
@@ -31,7 +31,7 @@ const Nav = ({carItems}) => {
                     <li><Link to="/contactos" onClick={() => setMenuOpen(false)}>Contactos</Link></li>
                     <li className='carnav'>
                       <buttom className='btncart' onClick={()=> setCartOpen(true)}><i class="fa-solid fa-cart-shopping"></i></buttom>
-                      <Cart carItems={carItems} isOpen={isCartOpen} onclose={() => setCartOpen(false)}/>
+                      <Cart borrarProducto={borrarProducto} carItems={carItems} isOpen={isCartOpen} onclose={() => setCartOpen(false)}/>
                     </li>
                 </ul>
 

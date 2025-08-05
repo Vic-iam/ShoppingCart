@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { use, useState } from 'react'
 import style from './estatico/producto.module.css'
 
-const Productos = ({ producto }) => {
+const Productos = ({ producto, agregarCarrito, borrarProducto}) => {
+  
+  const [cantidad, setCantidad] = useState(1);
+ 
+  const increase = () => setCantidad(prev => (prev < producto.stock ? prev + 1 :
+    prev))
+    const drecrease = () => setCantidad(prev => (prev > 1 ? prev - 1 : 1));
+
+  
   return (
 
 
@@ -18,12 +26,12 @@ const Productos = ({ producto }) => {
           <p className={style.stock}>{producto.stock}</p>
 
           <div className={style.cantidadContainer}>
-            <button className={style.qtyButton}>-</button>
-            <span></span>
-            <button className={style.qtyButton}>+</button>
+            <button className={style.qtyButton} onClick={drecrease}>-</button>
+            <span>{cantidad}</span>
+            <button className={style.qtyButton} onClick={increase}>+</button>
           </div>
           
-          <button className={style.agregar}>Agregar al carrito</button>
+          <button onClick={()=> agregarCarrito(producto)} className={style.agregar}>Agregar al carrito</button>
 
         </div>
       </section>
