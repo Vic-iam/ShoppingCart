@@ -10,14 +10,14 @@ const GaleriadeProductos = ({ cart,productos, cargando, agregarCarrito, borrarPr
 
     <>
 
-      <Nav  carItems={cart}/>
+      <Nav borrarProducto={borrarProducto} carItems={cart}/>
 
       <h2 style={{position: "absolute", top: "200px"}}>Productos</h2>
 
       {
         cargando ? <img src={loading} alt="loading" /> :
 
-          <ProducList borrarProducto={handleDeleteFromCart} agregarCarrito={agregarCarrito} productos={productos} />
+          <ProducList agregarCarrito={agregarCarrito} productos={productos} />
       }
 
     </>

@@ -8,12 +8,12 @@ const Home = ({cart,productos,cargando, agregarCarrito, borrarProducto}) => {
   return (
     <>
     
-      <Nav agregarCarrito={agregarCarrito} borrarProducto={borrarProducto} carItems={cart}/>
+      <Nav borrarProducto={borrarProducto} carItems={cart}/>
 
     {
       cargando ? <img src={loading} alt="loading" /> :
 
-      <ProducList borrarProducto={borrarProducto} agregarCarrito={agregarCarrito} productos={productos} />
+      <ProducList  agregarCarrito={agregarCarrito} productos={productos} />
      }
 
     </>
