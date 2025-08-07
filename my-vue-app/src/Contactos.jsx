@@ -2,13 +2,13 @@ import React from 'react'
 import Nav from './components/Nav'
 import { useState } from 'react'
 
-const  Contactos = ({cart}) => {  
+const  Contactos = () => {  
 
   return (
     
   <>
   
-  <Nav  carItems={cart}/>
+  <Nav  />
 
    <h2 style={{color: "white",position: "absolute" , bottom: "200px"}} >hola</h2>
 

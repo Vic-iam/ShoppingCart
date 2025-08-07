@@ -1,7 +1,12 @@
-import React from 'react';
+import { useContext } from 'react';
 import './estatico/Cart.css'
+import { CartContext } from './context/CartContext';
 
-const Cart = ({ carItems, isOpen, onclose, borrarProducto}) => {
+const Cart = ({ isOpen, onclose }) => {
+
+        const {cart, handleDeleteFromCart} = useContext(CartContext)
+    
+
     return (
         <div className={`cart-drawer ${isOpen ? 'open' : ''}`}>
             <div className='cart-header'>
@@ -9,14 +14,14 @@ const Cart = ({ carItems, isOpen, onclose, borrarProducto}) => {
                 <button onClick={onclose} className='close-button'>X</button>
             </div>
             <div className='cart-content'>
-                {carItems.length === 0 ? (
+                {cart.length === 0 ? (
                     <p style={{ color: 'red' }}>El carrito está vacío</p>
                 ) : (
                     <ul className='cart-item'>
-                        {carItems.map((item, index) => (
+                        {cart.map((item, index) => (
                             <li key={index} style={{ color: 'green' }}>
                                 {item.nombre} - {item.precio}
-                                <button onClick={() => borrarProducto(item)}><i class="fa-solid fa-cart-shopping"></i></button>
+                                <button onClick={() => handleDeleteFromCart(item)}><i class="fa-solid fa-cart-shopping"></i></button>
                             </li>
                         ))}
                     </ul>

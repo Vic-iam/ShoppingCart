@@ -1,7 +1,8 @@
-import React, { use, useState } from 'react'
+import React, { use, useContext, useState } from 'react'
 import style from './estatico/producto.module.css'
+import { CartContext } from './context/CartContext';
 
-const Productos = ({ producto, agregarCarrito, borrarProducto}) => {
+const Productos = ({ producto }) => {
   
   const [cantidad, setCantidad] = useState(1);
  
@@ -9,6 +10,7 @@ const Productos = ({ producto, agregarCarrito, borrarProducto}) => {
     prev))
     const drecrease = () => setCantidad(prev => (prev > 1 ? prev - 1 : 1));
 
+    const {handleAddToCart} = useContext(CartContext)
   
   return (
 
@@ -31,7 +33,7 @@ const Productos = ({ producto, agregarCarrito, borrarProducto}) => {
             <button className={style.qtyButton} onClick={increase}>+</button>
           </div>
           
-          <button onClick={()=> agregarCarrito(producto)} className={style.agregar}>Agregar al carrito</button>
+          <button onClick={()=> handleAddToCart(producto)} className={style.agregar}>Agregar al carrito</button>
 
         </div>
       </section>

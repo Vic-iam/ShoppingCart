@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
 import styles from './nav.module.css';
 import './estatico/Cart.css'
+import { CartContext } from './context/CartContext';
 
-const Nav = ({carItems, borrarProducto}) => {
+const Nav = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isCartOpen, setCartOpen] = useState(false)
 
@@ -31,7 +32,7 @@ const Nav = ({carItems, borrarProducto}) => {
                     <li><Link to="/contactos" onClick={() => setMenuOpen(false)}>Contactos</Link></li>
                     <li className='carnav'>
                       <buttom className='btncart' onClick={()=> setCartOpen(true)}><i class="fa-solid fa-cart-shopping"></i></buttom>
-                      <Cart borrarProducto={borrarProducto} carItems={carItems} isOpen={isCartOpen} onclose={() => setCartOpen(false)}/>
+                      <Cart isOpen={isCartOpen} onclose={() => setCartOpen(false)}/>
                     </li>
                 </ul>
 
