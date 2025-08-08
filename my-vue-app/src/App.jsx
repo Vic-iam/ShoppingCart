@@ -6,6 +6,7 @@ import Contactos from './Contactos'
 import Home from './Home'
 import Login from './Login'
 import { CartContext } from './components/context/CartContext';
+import DetallesProductos from './components/DetallesProductos';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               <Home />
             }
           />
+          <Route path='/productos/:id' element={<DetallesProductos />} />
           <Route
             path="/productos"
             element={
