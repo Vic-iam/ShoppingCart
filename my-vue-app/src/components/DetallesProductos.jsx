@@ -22,6 +22,13 @@ const DetallesProductos = () => {
 
     return(
         <>
+        <Nav />
+
+     <section>
+        <h1 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333'}}> {productos.nombre} </h1>
+        
+     </section>
+
         </>
     )
 }

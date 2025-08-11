@@ -1,6 +1,7 @@
 import React, { use, useContext, useState } from 'react'
 import style from './estatico/producto.module.css'
 import { CartContext } from './context/CartContext';
+import { Link } from 'react-router-dom';
 
 const Productos = ({ producto }) => {
   
@@ -34,6 +35,8 @@ const Productos = ({ producto }) => {
           </div>
           
           <button onClick={()=> handleAddToCart(producto)} className={style.agregar}>Agregar al carrito</button>
+
+          <Link to={`/productos/${producto.id}`}>Ver mas...</Link>
 
         </div>
       </section>
